@@ -1,0 +1,6 @@
+completed.html is combination of html and css.
+WebCalculator dir has calculator web using css, html, and javascript.
+Program dir is the same with programWebDasar.zip, it contains profile page
+that I build for final assignment that includes html, css and javascript
+assets dir is the dependency of completed.html
+sertifikat file is my accomplishment in webdev course

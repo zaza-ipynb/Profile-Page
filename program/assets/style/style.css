@@ -1,0 +1,403 @@
+/* Import File CSS */
+@import url('https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap');
+/* Public CSS */
+
+:root{
+    --primary-color: #0f4c75;
+    --accent-color1:blanchedalmond;
+    --accent-color2: #ffffff;
+    --accent-color3: #000000;
+}
+
+* {
+  box-sizing:border-box;
+}
+
+body{
+  overflow-x: hidden;
+  padding: 0;
+  margin: 0;
+  font-family: 'Quicksand', 'Open Sans', sans-serif;
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Header */
+Header{
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 40px;
+  align-items: center;
+  background-color: white;
+}
+Header .title{
+  font-weight: 700;
+  font-size: 28px;
+}
+
+#button-nav{
+  display: none;
+}
+
+.menu ul{
+  display: flex;
+  list-style: none;
+  justify-content: flex-start;
+  padding: 0;
+  font-weight: 700;
+}
+
+.menu ul li{
+  margin-left: 40px;
+  padding: 10px 20px;
+  border-bottom: 2px solid var(--accent-color2);
+
+}
+
+.menu ul .activeNavbar, .menu ul li:hover{
+  border-bottom: 2px solid var(--primary-color);
+}
+
+/* Slider */
+.slider{
+  height: 550px;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.slider .image{
+  display: none;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  user-select: none;
+  padding: 20px;
+  margin: 0 20px;
+  border-radius: 50%;
+  background-color: var(--accent-color2);
+}
+
+.next {
+  right: 0;
+}
+
+.prev:hover, .next:hover {
+  background-color: var(--accent-color1);
+  color: var(--primary-color);
+}
+
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* Index Slider */
+.indexImage {
+  cursor: pointer;
+  margin: 0 10px;
+  height: 20px;
+  width: 40px;
+  background-color: #bbb;
+  border-radius: 5px;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .indexImage:hover {
+  background-color: #717171;
+}
+
+/* container */
+.container{
+  display: flex;
+  padding: 5%;
+}
+
+/* content */
+.content{
+  padding: 20px;
+  width: 80%;
+}
+
+article{
+  border: 2px solid var(--accent-color3);
+  display: flex;
+  margin-bottom: 20px;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+article a{
+  border: 2px solid var(--primary-color);
+  width: fit-content;
+  padding: 10px;
+  border-radius: 20px;
+}
+
+article a:hover{
+
+  background-color: var(--primary-color);
+  color: var(--accent-color2);
+  width: fit-content;
+  padding: 10px;
+}
+
+article .desc {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+/* aside */
+aside{
+  padding: 20px;
+  width: 20%;
+}
+
+.profile{
+  border: 2px solid var(--accent-color3);
+  text-align: center;
+  padding: 20px;
+  background-color: var(--accent-color2);
+  border-radius: 20px;
+}
+
+#profile-title, .title{
+  font-family: 'Quicksand', cursive;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.profile-image{
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid var(--accent-color3);
+}
+
+.profile-button-download{
+  background-color: var(--primary-color);
+  cursor: pointer;
+  border: 2px solid  var(--primary-color);
+  color: var(--accent-color2);
+  margin: 20px;
+  padding: 10px 20px;
+  border-radius: 20px;
+}
+
+.profile-button-download:hover{
+  background-color: var(--accent-color2);
+  border: 2px solid  var(--primary-color);
+  color:  var(--primary-color);
+}
+
+.profile .sociamed{
+  margin-top: 20px;
+}
+
+/* Footer */
+
+Footer{
+  background-color: var(--accent-color3);
+  text-align: center;
+  color: var(--accent-color2);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media all and (max-width: 1500px) {
+
+
+  .slider{
+    max-height: 600px;
+  }
+  .content{
+    width: 70%;
+
+  }
+  aside{
+    width: 30%;
+  }
+}
+@media all and (max-width: 1200px) {
+
+
+  .container{
+    flex-direction: column-reverse;
+    align-items: center;
+
+  }
+
+  .content{
+    width: 100%;
+
+  }
+  aside{
+    width: 50%;
+  }
+}
+
+/* Medium screens: Tablet */
+@media all and (max-width: 800px) {
+
+
+  .container{
+    flex-direction: column-reverse;
+    align-items: center;
+
+  }
+
+  .content{
+    width: 100%;
+
+  }
+  aside{
+    width: 80%;
+  }
+}
+
+/* Small screens */
+@media all and (max-width: 600px) {
+  Header{
+    padding: 20px;
+  }
+
+  .menu{
+    position: relative;
+  }
+
+  .show{
+    opacity: 0;
+  }
+
+  .menu ul{
+    position: absolute;
+    right: 0;
+    flex-direction: column;
+    z-index: 10;
+    background-color: var(--accent-color1);
+    margin-left: 0;
+    justify-content: space-evenly;
+  }
+
+  .menu ul li{
+    margin: 10px 20px;
+    text-align: center;
+  }
+
+  .sticky {
+    position: fixed;
+    top: 0;
+ }
+
+  #button-nav{
+    display: block;
+  }
+
+  .content{
+    width: 100%;
+
+  }
+  aside{
+    width: 100%;
+  }
+
+  .slider{
+    height: 400px;
+    margin-bottom: 0;
+  }
+  .indexImage{
+    margin: 0;
+  }
+
+  article{
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 20px;
+  }
+
+  article img{
+    width: 100%;
+  }
+}
+
+.card {
+  box-shadow: 0 1px 2px rgba(0,0,0,0.15);
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+}
+
+.pront::first-letter {
+  font-size: 200%;
+  color: #e2832b;
+}
+
+/* Dropdown Button */
+.dropbtn {
+  background-color: black;
+  color:white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: black;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}

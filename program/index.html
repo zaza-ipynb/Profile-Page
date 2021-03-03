@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="assets/style/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title>My Profile</title>
+</head>
+<body>
+  <header>
+    <a class="title" href="">My Profile</a>
+    <nav class="menu">
+      <ul>
+        <li class="activeNavbar"><a href="index.html" >Home</a></li>
+        <li><a href="#aboutme">About Me</a></li>
+        <li><a href="#galeri">My Galery</a></li>
+        <li> <a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <button onclick="myFunction()" class="menu dropbtn"><b>Others</b></button>
+          <div id="myDropdown" class="dropdown-content">
+            <a href="index.html" >FAQ</a>
+            <a href="index.html" >Disclaimer</a>  
+            <a href="index.html" >Term of Service</a></div>
+          </li>
+      </ul>
+      <a id="button-nav" href=""><i class="fa fa-align-justify"></i></a>
+    </nav>
+    </div>
+    
+  </header>
+  <main>
+    <section>
+      <div class="slider">
+        <div class="image fade">
+          <img src="./assets/images/math1.jpg" style="width:100%">
+        </div>
+    
+        <div class="image fade">
+          <img src="./assets/images/math2.jpg" style="width:100%">
+        </div>
+        
+        <div class="image fade">
+          <img src="./assets/images/math3.jpg" style="width:100%">
+        </div>
+    
+        <a onclick="changeImage('prev')" class="prev"><i class="fa fa-chevron-left"></i></a>
+        <a onclick="changeImage('next')" class="next"><i class="fa fa-chevron-right"></i></a>
+      </div>
+      <div style="text-align:center">
+        <span class="indexImage"  onclick="changeImage(1)"></span>
+        <span class="indexImage" onclick="changeImage(2)"></span>
+        <span class="indexImage" onclick="changeImage(3)"></span>
+      </div>
+      <h2>Words<br></h2>
+      <p class="pront"><b>T</b>his page is containing information about general things about myself. Not only that, but also a gallery that I personally prefer.
+        But the most important thing is that, in this profile page, I've implement the requirement such as header, footer, aside, article, css,
+        and also javascript. In this field, I'm not really as professional as a front-end engineer who could build a more interactive and responsive page,
+        compared to mine, visual is not really matter, instead, functionality is the most important and priority.
+      </p>
+      <h2 id="contact">Contact</h2>
+      <div class="sociamed">
+        <a style="margin-right: 20px;" href="https://github.com/zaza-ipynb"><i class="fa fa-2x fa-github"></i> Github   </a>
+        <a style="margin-right: 20px;" href="https://www.linkedin.com/in/muhammad-ihza-mahendra-065a0817b/"><i class="fa fa-2x fa-linkedin"></i> LinkedIn   </a>
+        <a href="https://www.facebook.com/mihza00"><i class="fa fa-2x fa-facebook"></i>  Facebook   </a>
+      </div>
+    </section>
+    <article>
+      <section class="card container">
+        <div class="content">
+          <!--Get element by id "article" to load image using javascript-->
+          <h2 class="title" id="galeri">My Galery</h2>
+          <div id="article"></div>
+          <p>This is the end of the content, I'm looking forward to learn more about how cloud computing works. In my very field, which is Aritifial Intelligence,
+            Machine Learning and Deep Learning, cloud computing is required for resource to build, run, and maintain model to perform prediction
+            or anything that is use to perform using this model.
+          </p>
+        </div>
+        <aside>
+          <div  id="aboutme" class="profile">
+            <h3 id="profile-title">About Me</h3>
+            <img class="profile-image" src="./assets/images/me.jpg" alt="Muhammad Ihza Mahendra">
+            <p>Hello World! My name is <b>Muhammad Ihza Mahendra</b>, you can call me <b>Zaza</b>. I'm a Data Scientist that currently living in Bandung, Indonesia. I'm computer science student, please check my CV below!</p>
+            <div class="profile-button-download">
+              <a href="https://bit.ly/37iwpeL" download>Read My CV</a>
+    
+            </div>
+          </div>
+        </aside>
+      </section>
+  </article>
+  </main>
+  <footer>
+    <p>Copyright By Muhammad Ihza Mahendra - Dicoding &copy; 2021</p>
+    <div class="sociamed">
+      <a style="margin-right: 20px;" href="https://github.com/zaza-ipynb"><i class="fa fa-github"></i></a>
+      <a style="margin-right: 20px;" href="https://www.linkedin.com/in/muhammad-ihza-mahendra-065a0817b/"><i class="fa fa-linkedin"></i></a>
+      <a href="https://www.facebook.com/mihza00"><i class="fa fa-facebook"></i></a>
+    </div>
+  </footer>
+  <script type="text/javascript" src="assets/style/profile.js"></script>
+</body>
+</html>
